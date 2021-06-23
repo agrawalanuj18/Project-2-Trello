@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  .navbar {
+    padding: 3%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .tab ul li {
+    list-style: none;
+    margin: 0 35px;
+    float: left;
+    position: relative;
+  
+  }
+  
+  .tab ul li::before {
+    content: "";
+    position: absolute;
+    background-color: #17c6fb;
+    visibility: hidden;
+    transform: scaleX(0);
+    width: 100%;
+    height: 2.8px;
+    bottom: -2.8px;
+    left: 0;
+    
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .tab ul li:first-child {
+    margin-left: 45px;
+  }
+  
+  .tab ul li:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+  
+  .navbar ul li a {
+    color: rgba(0, 0, 0, 0.796);
+    line-height: 24px;
+    font: normal normal 600 16px "Open Sans", open-sans, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  
+  .tab .home {
+    border-bottom: solid 3px #02a6d6;
+  }
+  
+  
+  
+  .main {
+    background-color: black;
+    color: white;
+    padding: 25px 40px;
+  }
+  
+  .main .headline {
+    line-height: 40px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    word-spacing: 0.5px;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin: 0 0 8px;
+    letter-spacing: 0.5px;
+  }
+  
+  .trending {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 31.9%;
+    margin: 4px;
+    position: relative;
+    color: white;
+    transition: 0.5s linear;
+    overflow: hidden;
+  }
+  
+  .card img {
+    width: 100%;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .card img:hover{
+    transform: scale(1.2);
+  }
+  .card:hover{
+    color:blue !important;
+  }
+  
+  .card:nth-child(n + 4) {
+    width: 23.5%;
+    height: 100%;
+  }
+  
+  .card img:hover {
+    opacity: 0.8;
+  }
+  
+  .titles {
+    width: 100%;
+    font-size: 1vh;
+    padding: 10px 0 10px 10px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.2)
+    );
+  }
+  
+  .titles p {
+    font-size: 14px;
+    color: White;
+    text-decoration: none;
+  }
+  
+  .titles p:first-of-type {
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  
+  .about,
+  .contact {
+    margin: 35px 40px 35px;
+    padding: 10px 0 10px 10px;
+  }
+  
+  
+  .contact a {
+    color: rgba(0, 0, 0, 0.945);
+    text-decoration: none;
+  }
+  
+  .contact a:hover {
+    color: blue;
+  }
+
+  footer {
+    background-color: rgba(0, 0, 0, 0.945);
+    text-align: center;
+    padding: 70px 0 0;
+  }
+
+  .footer {
+    padding: 1 1 50px;
+  }
+
+  .downnav a {
+    font-size: 18px;
+    line-height: 25px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.857);
+  }
+  .down li {
+    display: inline-block;
+    list-style: none;
+    padding: 15px 16px;
+  }
+  .copyright {
+    margin: 0 0 16px;
+    padding: 30px 15px 0;
+    font-size: 11.2px;
+    color: rgba(255, 255, 255, 0.336);
+  }
+  .bottom {
+    background: black;
+    text-align: center;
+  }
+  .bottom a,
+  .last a {
+    background-position: 50%;
+    display: inline-block;
+    height: 75px;
+    vertical-align: bottom;
+    width: 100px;
+    margin: 20px 30px 0 30px;
+    background-repeat: no-repeat !important;
+    opacity: 0.6;
+  }
+  .last a {
+    margin-bottom: 30px;
+  }
+  .last a {
+    opacity: 0.8;
+  }
+  .ott img {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 50px;
+    vertical-align: bottom;
+    width: 100px;
+  }
+  #corus {
+    background: url(assets/corus-logo.svg);
+  }
+  .last {
+    color: rgba(255, 255, 255, 0.714);
+  }
+  
+  @media (max-width: 1200px) {
+    .navbar {
+      align-items: center;
+    }
+    .cartoon {
+      margin: 0 auto;
+    }
+    .cartoon img{
+      width:80%;
+    }
+    .tab {
+      display: none;
+    }
+    
+    .card {
+      width: 48% !important;
+    }
+    .card:nth-child(n + 5) {
+      width: 32.7% !important;
+    }
+    .card:last-child {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 1045px) {
+    .card:nth-child(n + 0) {
+      width: 45% !important;
+    }
+    .card:nth-child(1) {
+      width: 100% !important;
+    }
+    .card:last-child {
+      display: block;
+    }
+  }
+  @media (max-width: 645px) {
+    .card:nth-child(n + 2) {
+      width: 45% !important;
+    }
+  }
+  @media (max-width: 596px) {
+    .card:nth-child(n + 0) {
+      width: 100% !important;
+    }
+  }
+  @media (max-width: 350px) {
+    .ott a {
+      padding: 0;
+      margin: 4.5px;
+    }
+  }
+  
